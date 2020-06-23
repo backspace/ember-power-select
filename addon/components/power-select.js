@@ -84,7 +84,8 @@ export default @tagName('') @layout(templateLayout) class PowerSelect extends Co
       highlight: this._highlight,
       select: this._select,
       choose: this._choose,
-      scrollTo: this._scrollTo
+      scrollTo: this._scrollTo,
+      setIsActive: this.setIsActive.bind(this),
     }
     assert('<PowerSelect> requires an `@onChange` function', this.onChange && typeof this.onChange === 'function');
   }
